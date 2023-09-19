@@ -13,6 +13,12 @@ import Completed from './completed/completed';
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [userResponses, setUserResponses] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    setIsMobile(/mobile|android|iphone|ipad|phone/i.test(userAgent));
+  }, []);
 
   const onSelectOption = (response) => {
     setUserResponses([...userResponses, response]);
@@ -49,14 +55,8 @@ const App = () => {
     });
   };
 
-  useEffect(() => {
-    if (currentQuestion === questionsData.length) {
-      handleSubmit();
-    }
-  }, [currentQuestion]);
-
   return (
-    <div className="App">
+    <div className={`App ${isMobile ? 'mobile' : ''}`}>
       <img src={cat} alt="Logo" className="logo" />
       {currentQuestion === 2 ? (
         <CheckboxQuestion
