@@ -3,9 +3,10 @@ import './email.css';
 
 const EmailQuestion = ({ question, onNext }) => {
   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
 
   const handleContinueClick = () => {
-    onNext({ email });
+    onNext({ email, name });
   };
 
   return (
@@ -21,6 +22,17 @@ const EmailQuestion = ({ question, onNext }) => {
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
             placeholder="(802) 230-8811"
+          />
+        </label>
+      </div>
+      <div>
+        <label>
+          Name:
+          <input 
+            type="text" 
+            value={email} 
+            onChange={(e) => setName(e.target.value)} 
+            placeholder="John Doe"
           />
         </label>
       </div>
