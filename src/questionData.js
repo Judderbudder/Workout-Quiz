@@ -52,14 +52,14 @@ const questionsData = [
     question: 'What is your sex?',
     options: [
       { text: 'Male', photoUrl: '' },
-      { text: 'Dishwasher', photoUrl: '' }
+      { text: 'Female', photoUrl: '' }
     ]
   },
   {
     type: 'radio',
     question: 'How much time do you spend a week working out',
     options: [
-      { text: '0 😔', photoUrl: 'placeholder_url34' },
+      { text: '0 😔', photoUrl: '' },
       { text: 'Less than 1 hour 🫤', photoUrl: '' },
       { text: '2-5 hours 🏋️‍♂️', photoUrl: '' },
       { text: '4-8 hours 💪', photoUrl: '' },
@@ -87,14 +87,14 @@ const questionsData = [
   },
   {
     type: 'radio',
-    question: 'Whats your current and target weight',
+    question: "What's your current and target weight",
     options: [
       { text: '10ft', photoUrl: '' }
     ]
   },
   {
     type: 'radio',
-    question: 'Whats your height?',
+    question: "What's your height?",
     options: [
       { text: 'h3k', photoUrl: '' },
       { text: 'hwj', photoUrl: '' }
@@ -102,7 +102,7 @@ const questionsData = [
   },
   {
     type: 'radio',
-    question: 'Whats your email?',
+    question: "What's your phone number?",
     options: [
       { text: 'h3k', photoUrl: '' },
       { text: 'hwj', photoUrl: '' }
@@ -112,7 +112,9 @@ const questionsData = [
     type: 'radio',
     question: 'What is your level of fitness',
     options: [
-      { text: 'Worst shape', photoUrl: '' },
+      { text: 'Am not able to climb', photoUrl: '' },
+      { text: 'Running is tough', photoUrl: '' },
+      { text: 'I run for cardio', photoUrl: '' },
       { text: 'On fire', photoUrl: '' }
     ]
   },

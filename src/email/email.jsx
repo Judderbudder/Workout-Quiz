@@ -15,12 +15,12 @@ const EmailQuestion = ({ question, onNext }) => {
       </div>
       <div>
         <label>
-          Email:
+          Phone Number:
           <input 
             type="text" 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} 
-            placeholder="dunnej@lafayette.edu"
+            placeholder="(802) 230-8811"
           />
         </label>
       </div>

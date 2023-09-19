@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Question from './question/question';
 import CheckboxQuestion from './checkboxquestion/CheckboxQuestion';
 import "./App.css";
@@ -7,6 +7,8 @@ import questionsData from './questionData';
 import WeightQuestion from './weight/weight';
 import HeightQuestion from './height/height';
 import EmailQuestion from './email/email';
+import cat from './cat.png';
+import Completed from './completed/completed';
 
 const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -47,8 +49,15 @@ const App = () => {
     });
   };
 
+  useEffect(() => {
+    if (currentQuestion === questionsData.length) {
+      handleSubmit();
+    }
+  }, [currentQuestion]);
+
   return (
     <div className="App">
+      <img src={cat} alt="Logo" className="logo" />
       {currentQuestion === 2 ? (
         <CheckboxQuestion
           question={questionsData[2].question}
@@ -79,8 +88,7 @@ const App = () => {
         />
       ) : (
         <div>
-          <h2>Quiz Completed</h2>
-          <button onClick={handleSubmit}>Submit</button>
+          <Completed />
         </div>
       )}
     </div>
