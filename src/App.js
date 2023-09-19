@@ -20,6 +20,12 @@ const App = () => {
     setIsMobile(/mobile|android|iphone|ipad|phone/i.test(userAgent));
   }, []);
 
+  useEffect(() => {
+    if (currentQuestion === questionsData.length) {
+      handleSubmit(); // Automatically submit when reaching the end
+    }
+  }, [currentQuestion]);
+
   const onSelectOption = (response) => {
     setUserResponses([...userResponses, response]);
     setCurrentQuestion(currentQuestion + 1);
@@ -38,7 +44,6 @@ const App = () => {
   const handleSubmit = () => {
     console.log('User Responses:', userResponses);
 
-    // Make a POST request to SheetDB API
     fetch('https://sheetdb.io/api/v1/gb4d3yxjk0mf7', {
       method: 'POST',
       headers: {
