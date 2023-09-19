@@ -1,0 +1,71 @@
+/* checkboxquestion.css */
+
+/* Styles for the container div */
+.checkquestion {
+    
+  }
+
+.checkcontent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+
+
+
+}
+
+
+  
+  /* Styles for the question title */
+  .checkquestionTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+    padding-left: 60px;
+  }
+  
+  /* Styles for individual options */
+  label {
+    display: inline-block;
+    width: 48%; /* Adjust the width as needed */
+    margin-bottom: 10px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  /* Styles for the option text */
+  .optionText {
+    font-size: 1rem;
+  }
+  
+  /* Styles for the custom checkbox label (for text) */
+  .customCheckboxLabel {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Styles for the custom checkbox when checked */
+  .customCheckboxLabel.checked {
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+    background-color: #404040;
+
+     /* Change background color to red */
+  }
+  
+
+  .button {
+
+    padding-top: 30px;
+  }
+  

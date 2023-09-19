@@ -1,0 +1,56 @@
+/* weight.css */
+
+/* Container */
+.questionTitler {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Label and Input Fields */
+  .label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 200px;
+  }
+  
+  .inputField {
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #1e1e1e;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  /* Continue Button */
+  .continueButton {
+    background-color: #181818; /* Bootstrap primary color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .continueButton:hover {
+    background-color: #313131; /* Darker shade of primary color on hover */
+  }
+  
+
+  .questionTitler {
+
+    color: white;
+  }
+
+  .inputContainer {
+    position: relative;
+  }
+  
+  .units {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
